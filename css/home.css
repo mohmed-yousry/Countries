@@ -1,0 +1,196 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0px 30px;
+}
+
+header {
+  padding: 10px;
+  padding-top: 20px;
+}
+header .container .nav-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .container .nav-header.dark * {
+  color: white;
+}
+header .container .nav-header p {
+  cursor: pointer;
+}
+@media (max-width: 450px) {
+  header .container .nav-header p {
+    font-size: 13px;
+  }
+  header .container .nav-header h2 {
+    font-size: 15px;
+  }
+}
+
+.search {
+  margin-top: 50px;
+}
+.search .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.search .container .input-search {
+  position: relative;
+}
+.search .container .input-search input {
+  border: none;
+  padding: 10px;
+  text-align: end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.search .container .input-search input:focus {
+  border: none;
+  outline: none;
+}
+.search .container .input-search i {
+  position: absolute;
+  left: 5%;
+  top: 34%;
+  color: rgba(0, 0, 0, 0.315);
+}
+.search .container .input-search i.dark {
+  color: #ffffffad;
+}
+.search .container .input-select select {
+  outline: none;
+  padding: 10px;
+  border: none;
+}
+.search .container .input-select select:focus {
+  outline: none;
+  border: none;
+}
+.search .container .input-select select option {
+  border: none;
+}
+.search .container select.dark,
+.search .container input.dark {
+  background-color: #2b3945;
+  color: #ffffffad;
+}
+.search .container input.dark::-webkit-input-placeholder {
+  color: #ffffffad;
+}
+.search .container input.dark::-moz-placeholder {
+  color: #ffffffad;
+}
+.search .container input.dark:-ms-input-placeholder {
+  color: #ffffffad;
+}
+.search .container input.dark::-ms-input-placeholder {
+  color: #ffffffad;
+}
+.search .container input.dark::placeholder {
+  color: #ffffffad;
+}
+@media (max-width: 375px) {
+  .search .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .search .container .input-search {
+    width: 100%;
+  }
+  .search .container .input-search input {
+    width: 100%;
+  }
+  .search .container .input-select {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .search .container .input-select select {
+    width: 100%;
+  }
+}
+
+body {
+  font-size: 14px;
+}
+
+body.dark {
+  background-color: #202c37;
+}
+
+.content .container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+.content .container .col {
+  cursor: pointer;
+}
+.content .container .col img {
+  width: 100%;
+}
+.content .container .col .card .card-body {
+  padding: 15px;
+}
+.content .container .col .card .card-body .card-text {
+  color: black;
+  font-weight: bold;
+}
+.content .container .col .card .card-body .card-text span {
+  color: #000;
+  font-weight: 300;
+}
+.content .container .col .card .card-body .card-title {
+  font-size: 16px;
+}
+.content .container .col.dark {
+  background-color: #2b3945;
+}
+.content .container .col.dark .card-body .card-title {
+  color: white;
+}
+.content .container .col.dark .card-body .card-text {
+  color: rgba(255, 255, 255, 0.733);
+}
+.content .container .col.dark .card-body .card-text span {
+  color: gray;
+}

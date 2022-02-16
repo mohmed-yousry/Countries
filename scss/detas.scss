@@ -1,0 +1,92 @@
+@use "./rouls";
+@use "./_header.scss";
+$derk-bacground: hsl(207, 26%, 17%);
+$dark-element-color: hsl(209, 23%, 22%);
+
+body {
+  font-size: 16px;
+  &.dark {
+    background-color: $derk-bacground;
+    * {
+      color: #ffffffd1;
+    }
+  }
+}
+
+.back {
+  margin-top: 50px;
+}
+
+.card {
+  margin-top: 30px;
+  .container {
+    img {
+      width: 100%;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+        width: 40%;
+      }
+
+      .right {
+        width: 50%;
+        text-transform: capitalize;
+
+        h2 {
+          margin-bottom: 20px;
+        }
+        .text {
+          .left-text {
+            width: 45%;
+          }
+          .right-text {
+            flex-grow: 0;
+          }
+          p {
+            font-weight: bold;
+
+            span {
+              font-weight: 200;
+            }
+
+            &.languages {
+              span {
+                display: block;
+              }
+            }
+          }
+          display: flex;
+          justify-content: space-between;
+
+          .borderContries {
+            margin-top: 100px;
+            font-weight: bold;
+            display: flex;
+            flex-wrap: wrap;
+            width: 210%;
+            .border-item {
+              &.dark {
+                background-color: $dark-element-color;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        .left {
+          width: 100%;
+        }
+        .right {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use "./rouls";
+@use "./header";
+$derk-bacground: hsl(207, 26%, 17%);
+$dark-element-color: hsl(209, 23%, 22%);
+
+// - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+// - Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+// - Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+
+// - Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+// - Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+// - White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+body {
+  font-size: 14px;
+}
+
+body.dark {
+  background-color: $derk-bacground;
+}
+
+.content {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+    .col {
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+      .card {
+        .card-body {
+          padding: 15px;
+          .card-text {
+            color: black;
+            font-weight: bold;
+            span {
+              color: #000;
+              font-weight: 300;
+            }
+          }
+          .card-title {
+            font-size: 16px;
+          }
+        }
+      }
+      &.dark {
+        background-color: $dark-element-color;
+        .card-body {
+          .card-title {
+            color: white;
+          }
+          .card-text {
+            color: rgba(255, 255, 255, 0.733);
+            span {
+              color: gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

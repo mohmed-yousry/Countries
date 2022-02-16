@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0px 30px;
+}
