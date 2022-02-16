@@ -9,7 +9,7 @@ function addDAta(arr, stat) {
     let col = document.createElement("div");
     col.className = `col`;
     col.innerHTML = `
-        <a href = "../pages/datels.html">
+        <a href = "./pages/datels.html">
         <div class="card">
         <img src="${arr[i].flags.png}" alt="" />
           <div class="card-body">
