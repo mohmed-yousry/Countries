@@ -2,13 +2,6 @@ let body = document.querySelector("body");
 
 let allspanCountry;
 
-// btnDark.addEventListener("click", function () {
-//   body.classList.toggle("dark");
-//   allspanCountry.forEach((e) => {
-//     e.classList.toggle("dark");
-//   });
-// });
-
 let contry = sessionStorage.getItem("contry");
 let container = document.querySelector(".card .container");
 
@@ -89,7 +82,6 @@ fetch(`https://restcountries.com/v2/name/${contry}`)
           document.querySelector(".borderContries").appendChild(item);
         }
       }
-      // console.log(e);
     });
 
     return addborder;
@@ -119,95 +111,4 @@ fetch(`https://restcountries.com/v2/name/${contry}`)
     }
   });
 
-// async function getdata() {
-//   let alldata = await fetch(`https://restcountries.com/v2/name/${contry}`);
-//   let alldata2 = await alldata.json();
-//   console.log(alldata2[0]);
 
-//   let content = document.createElement("div");
-//   content.className = "content";
-//   let allborder = alldata2[0].borders;
-//   let spans;
-//   content.innerHTML = `
-//   <div class="left">
-//   <img src="${alldata2[0].flags.png}" alt="" />
-// </div>
-// <div class="right">
-//   <h2 class="card-title">blugem</h2>
-//   <div class="text">
-//     <div class="left-text">
-//       <p class="nativeName">
-//         naviteName :
-//         <span class="naviteNameSpan">${alldata2[0].nativeName}</span>
-//       </p>
-//       <p class="population">
-//         population :
-//         <span class="populationspan">${alldata2[0].population}</span>
-//       </p>
-//       <p class="Region">
-//         Region :
-//         <span class="Region">${alldata2[0].region}</span>
-//       </p>
-//       <p class="SubRegion">
-//         SubRegion :
-//         <span class="SubRegionspan">${alldata2[0].subregion}</span>
-//       </p>
-//       <p class="Capital">
-//         Capital :
-//         <span class="Capital span">${alldata2[0].capital}</span>
-//       </p>
-//       <div class="borderContries">
-//         border Contries :
-
-//       </div>
-//     </div>
-//     <div class="right-text">
-//       <p class="TopDomin">
-//         Top Level Domain :
-//         <span class="Topdominspain">${alldata2[0].topLevelDomain[0]}</span>
-//       </p>
-//       <p class="currencies">
-//         currencies :
-//         <span class="currenciesspan">${alldata2[0].currencies[0].name}</span>
-//       </p>
-//       <p class="languages">
-//         languages :
-//         <span class="languagesspan"></span>
-//       </p>
-//     </div>
-//   </div>
-// </div>
-
-//   `;
-
-//   container.appendChild(content);
-// let spn;
-// for (let x = 0; x < allborder.length; x++) {
-//   spans = document.createElement("span");
-//   spans.innerHTML = allborder[x];
-//   spans.style.paddingLeft = `calc(25% / ${allborder.length})`;
-//   spans.style.paddingRight = `calc(25% / ${allborder.length})`;
-//   spans.style.marginLeft = `3px`;
-//   document.querySelector(".borderContries").appendChild(spans);
-// }
-
-//   let leng = alldata2[0].languages;
-//   spn = document.querySelector(".languagesspan");
-
-//   console.log(alldata2[0]);
-
-//   for (let i = 0; i < allleng.length; i++) {
-//     let spnleng = document.createElement("span");
-//     spnleng.innerHTML = `${allleng[i].nativeName}`;
-//     // console.log(allleng);
-//     document.querySelector(".languages").appendChild(spnleng);
-//   }
-
-//   allspanCountry = Array.from(
-//     document.querySelectorAll(
-//       ".card .container .content .right .text .borderContries span"
-//     )
-//   );
-// }
-
-// getdata();
