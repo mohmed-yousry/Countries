@@ -126,7 +126,7 @@ header .container .nav-header p {
 .search .container input.dark::placeholder {
   color: #ffffffad;
 }
-@media (max-width: 375px) {
+@media (max-width: 767px) {
   .search .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
